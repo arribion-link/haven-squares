@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* @import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800); */
 
 *{
     padding: 0;
@@ -7,10 +8,6 @@
     box-sizing: border-box;
 }
 
-:root{
-
-
-}
 
 body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -19,18 +16,234 @@ body{
     margin: auto;
 }
 
-section{
-    min-height: 60vh;
-    margin: 3em 1em;
-    padding: 1em;
+/* HEADER */
+.header{
+    display: flex;
+    flex-direction: column;
+    background-color: dodgerblue;
 }
 
-.how-it-works-section{
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: #1e40af;
+    color: white;
+}
+
+.navbar .logo h4{
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.navbar nav ul{
+    list-style: none;
+    display: flex;
+    gap: 2em;
+
+}
+
+.navbar nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.navbar nav ul li a:hover{
+    color: #93c5fd;
+    transform: scale(1.1);  
+    font-weight: 600;
+}
+
+
+/* HERO SECTION */
+.hero-section{
+   background-image: linear-gradient(to bottom, rgba(0, 134, 201, 0.95), rgba(2, 86, 255, 0.105)), url('./assets/call-to-action.jpg');
+    background-size: cover;
+    background-position: center;
+  padding-top: 5em;
+  min-height: 85vh;
+}
+
+.cta-container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.cta-container .heading{
+    font-size: 3em;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+}
+
+.cta-container .subheading{
+    font-size: 1.2em;
+    color: #000000;
+}
+
+.button-group{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.button-group   button{
+    padding: 0.8em 1.5em;
+    font-size: 1em;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-group .primary-btn{
+    background-color: dodgerblue;
+    color: white;
+}
+.button-group .primary-btn:hover{
+    background-color: #1e40af;
+    transform: scale(1.05);
+}
+
+.button-group .secondary-btn{
+    background-color: white;
+    color: dodgerblue;
+    border: 2px solid dodgerblue;
+}
+
+.button-group .secondary-btn:hover{
+    background-color: #ecf5ff;
+    color: rgb(0, 68, 127);
+    transform: scale(1.05);
+}
+
+
+
+/* ABOUT SECTION */
+.about-section{
+    padding: 4em 2em;
     background-color: white;
 }
 
-footer{
-    min-height: 50vh;
-    background-color: rgb(148, 148, 148);
-    padding: 1em;
+.about-container{
+    display: grid;
+   grid-template-columns: repeat(2, 1fr);
 }
+
+.about-haven-squares{
+    border: 2px solid dodgerblue;
+    padding: 5px;
+    border-radius: 2px;
+    margin-bottom: 2em;
+}
+
+.about-heading{
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 1em;
+    color: #1e40af;
+}
+/* services section */
+.services-section{
+    margin-top: 4em;
+    padding: 2em 0;
+    background-color: #f0f9ff;
+}
+.services-heading{
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 2em;
+    color: #1e40af;
+}
+
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    padding: 0 2em;
+}
+
+.services-card{
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+    padding: 1em;
+    border-radius: 2px;
+    margin-bottom: 2em;
+    min-height: 10em;
+}
+
+.services-card:hover{
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.service-card-header{
+    display: flex;
+    gap: 1em ;
+}
+
+.service-icon{
+    width: 50px;
+    height: 50px;
+    color: dodgerblue;
+}
+
+/* PRICING SECTION */
+.section-header{
+    text-align: center;
+    margin-bottom: 2em;
+}
+.section-header .section-title{
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #1e40af;
+}
+.section-header .section-subtitle{
+    font-size: 1.2em;
+    color: #374151;
+    margin-top: 0.5em;
+}
+.pricing-section{
+    padding: 4em 2em;
+    background-color: white;
+}
+
+.pricing-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+}
+
+.pricing-card{
+    border: 2px solid dodgerblue;
+    padding: 5px;
+    border-radius: 2px;
+    margin-bottom: 2em;
+    min-height: 30em;
+}
+
+.pricing-card-header{
+    background-color: dodgerblue;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    border-radius: 2px 2px 0 0;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.monthly-price{
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 1em 0;
+    color: #1e40af;
+}   

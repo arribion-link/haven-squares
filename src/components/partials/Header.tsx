@@ -1,10 +1,8 @@
-import Navbar from "../Navbar"
-import Filter from "../Filter"
+import Navbar from "../cards/Navbar"
 const Header = () => {
   return (
-    <header>
+    <header className="header">
         <Navbar/>
-        <Filter/>
     </header>
   )
 }
