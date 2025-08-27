@@ -4,7 +4,7 @@ import About from "../components/sections/About"
 import Galary from "../components/sections/Galary"
 import Footer from "../components/partials/Footer"
 import Pricing from "../components/sections/Pricing"
-
+import Testmonials from "../components/sections/Testmonials"
 
 const home = () => {
   return (
@@ -12,6 +12,7 @@ const home = () => {
       <Header/>
       <Hero/>
       <About/>
+      <Testmonials/>
       <Pricing/>
       <Galary/>
       <Footer/>
