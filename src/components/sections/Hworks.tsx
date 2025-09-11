@@ -1,8 +1,5 @@
 import IMG from '../../assets/images/about-us.png'
 const Hworks = () => {
-  const sm = {
-    maxWidth: '30em'
-  }
   return (
     <section>
       <h1>How Haven-Square Works</h1>
@@ -23,8 +20,7 @@ const Hworks = () => {
           <img
             src={IMG}
             alt=""
-            className=""
-            style={sm}
+            className="how-i-w-image"
           />
         </div>
       </div>

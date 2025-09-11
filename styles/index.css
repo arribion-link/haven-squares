@@ -9,6 +9,7 @@
 }
 
 
+
 body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: aliceblue;
@@ -150,6 +151,12 @@ body{
     margin-bottom: 1em;
     color: #1e40af;
 }
+
+/* HOW IT WORKS */
+ .how-i-w-image{
+    max-width: 40em;
+}
+
 /* services section */
 .services-section{
     margin-top: 4em;
@@ -166,7 +173,7 @@ body{
 
 .services-container{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:  repeat( auto-fit, minmax(250px, 1fr));
     gap: 2em;
     padding: 0 2em;
 }
@@ -216,7 +223,7 @@ body{
     padding: 4em 2em;
     background-color: #f0f9ff;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:  repeat( auto-fit, minmax(250px, 1fr));
     gap: 2em;
 }
 .testimonial-card{
@@ -293,7 +300,7 @@ body{
 
 .pricing-container{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2em;
 }
 
@@ -369,4 +376,59 @@ footer{
     color: white;
     margin-top: 2em;
     height: 60vh;
+}
+
+@media(max-width:768px){
+    .header{
+        display: none;
+    }
+    .hero-section{
+        padding-top: 5em;
+    }
+
+    .cta-container .heading{
+        font-size: 2em;
+        font-weight: 600;
+    }
+
+    .cta-container .subheading{
+        font-size: 1.2em;
+    }
+
+    .button-group{
+        justify-content: center;
+        gap: 0.6em;
+    }
+
+
+    .button-group .secondary-btn:hover{
+        background-color: #ecf5ff;
+        color: rgb(0, 68, 127);
+        transform: scale(1.05);
+    }
+    /* ABOUT SECTION */
+    .about-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .about-haven-squares{
+        padding: 3px;
+        border-radius: 2px;
+        margin-bottom: 2em;
+    }
+
+    .about-heading{
+        font-size: 2em;
+        font-weight: 500;
+        margin-bottom: 1em;
+    }
+
+    .how-i-w-image{
+        max-width: 17em;
+    }
+
+}
+
+@media(max-width:1024px){
+
 }
